@@ -6,7 +6,6 @@
     {
         array[i] = random.Next(100, 1000);
     }
-    Console.WriteLine(array);
     return array;
 }
 
@@ -30,8 +29,6 @@ int UserLen = Convert.ToInt32(Console.ReadLine());
 int [] mass = arrayNum(UserLen);
 int result = EvenNums(mass);
 
-arrayNum(UserLen);                          // 33-34 строки -- попытки вывести массив, но не выводит
-Console.WriteLine($"Ваш массив: {mass}");
-
+Console.WriteLine(string.Join(",", mass)); // Join - немного подсмотрел на stackoverflow, так как вместо массива выводилось System.Int32[]
 
 Console.WriteLine($"Количество четных чисел в массиве: {result}");
